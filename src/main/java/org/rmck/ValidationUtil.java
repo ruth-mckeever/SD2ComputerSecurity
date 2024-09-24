@@ -30,7 +30,7 @@ public class ValidationUtil {
 
     public static boolean CheckPassword(String password) {
         //TODO: Break this down
-        String passwordPattern = "^(?=.*\\d)(?=.*[a-zA-Z])(?=.*[A-Z])(?=.*[-\\#\\$\\.\\%\\&\\*])(?=.*[a-zA-Z]).{8,20}$";
+        String passwordPattern = "^(?=.*\\d)(?=.*[a-zA-Z])(?=.*[A-Z])(?=.*[-#$.%&*])(?=.*[a-zA-Z]).{8,20}$";
         if (password.matches(passwordPattern)) {
             return true;
         }
