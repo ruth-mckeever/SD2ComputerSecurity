@@ -113,17 +113,27 @@ public class Main {
         String textPattern = "[a-zA-Z]+";
         displayResult(input, textPattern, "text should not contain numbers or special characters");
     }
+
     //2.	A binary number (i.e., only contains 1’s and 0’s)
     public static void question2() {
         String input = getInput("Please enter a binary number");
         String binaryPattern = "[01]+";
         displayResult(input, binaryPattern, "input should only contain 1's and 0's");
     }
+
+    //3.	A string that is either Saturday or Sunday.
+    public static void question3(){
+        String input = getInput("Please enter Saturday or Sunday");
+        String weekendPattern = "[Ss](atur|un)day";  //Updated to allow upper or lower case s
+        displayResult(input, weekendPattern, "input should be exactly 'Saturday' or 'Sunday'");
+    }
+
     public static String getInput(String instructions) {
         System.out.println(instructions);
         Scanner keyboard = new Scanner(System.in);
         return keyboard.nextLine();
     }
+
     public static void displayResult(String input, String pattern, String errorMessage){
         if (input.matches(pattern)) {
             System.out.println("Valid");
@@ -132,12 +142,7 @@ public class Main {
             System.out.println("Invalid - " + errorMessage);
         }
     }
-    //3.	A string that is either Saturday or Sunday.
-    public static void question3(){
-        String input = getInput("Please enter Saturday or Sunday");
-        String weekendPattern = "[Ss](atur|un)day";  //Updated to allow upper or lower case s
-        displayResult(input, weekendPattern, "input should be exactly 'Saturday' or 'Sunday'");
-    }
+
 
     //4.	A valid DkIT student number (i.e., a ‘D’ followed by two zeros and 6 more numbers)
     public static void question4() {

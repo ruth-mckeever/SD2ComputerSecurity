@@ -3,6 +3,8 @@ package org.rmck;
 public class ValidationUtil {
 
 
+
+    
     public static boolean CheckUserName(String userName) {
         String usernamePattern = "[a-zA-Z0-9\\-_.]+";
         if (userName.matches(usernamePattern)) {
@@ -12,6 +14,8 @@ public class ValidationUtil {
     }
 
 
+
+
     public static boolean CheckIrishPhoneNumber(String phoneNumber) {
         String phonePattern = "(\\+353|0)8[35679][0-9]{7}";
         if (phoneNumber.matches(phonePattern)) {
@@ -19,6 +23,9 @@ public class ValidationUtil {
         }
         return false;
     }
+
+
+
 
     public static boolean CheckFullname(String fullname) {
         String namePattern = "[A-Za-z \\-']{2,100}";
